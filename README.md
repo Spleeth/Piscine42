@@ -3,4 +3,19 @@
 
 Resultats des differents projets.
 
-C00 - Waiting for results...
+Shell00 :
+```bash
+  60%
+```
+Shell01 :
+```bash
+  Skipped
+```
+C00 :
+```bash
+  Waiting for results...
+```
+C01 :
+```bash
+  Waiting for results...
+```
