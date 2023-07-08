@@ -3,19 +3,19 @@
 
 Resultats des differents projets.
 
-Shell00 :
+✅ - Shell00 :
 ```
   60%
 ```
-Shell01 :
+❌ - Shell01 :
 ```
   Skipped
 ```
-C00 :
+⏳ - C00 :
 ```
   Waiting for results...
 ```
-C01 :
+⏳ - C01 :
 ```
   Waiting for results...
 ```
