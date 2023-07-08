@@ -4,7 +4,7 @@
 Resultats des differents projets.
 
 Shell00 :
-```bash
+```md
   60%
 ```
 Shell01 :
