@@ -6,9 +6,11 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 12:13:51 by event             #+#    #+#             */
-/*   Updated: 2023/07/08 12:13:52 by event            ###   ########.fr       */
+/*   Updated: 2023/07/08 15:44:41 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c, int newLine);
 
@@ -62,10 +64,17 @@ void	draw_vertical(int height, int width, int a, int b)
 
 void	rush(int x, int y)
 {
-	draw_horizontal(x);
-	draw_vertical(y, x, 0, 0);
-	if (y > 1)
+	if (x <= 0 || y <= 0)
+	{
+		write(1, "impossible valeur negative ou nulle\n", 36);
+	}
+	else
 	{
 		draw_horizontal(x);
+		draw_vertical(y, x, 0, 0);
+		if (y > 1)
+		{
+			draw_horizontal(x);
+		}
 	}
 }
