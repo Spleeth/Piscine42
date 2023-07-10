@@ -19,3 +19,8 @@ Resultats des differents projets.
 ```
   Waiting for results...
 ```
+
+✅ - Rush00 :
+```
+  100%
+```
