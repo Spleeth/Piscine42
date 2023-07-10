@@ -24,7 +24,3 @@ Resultats des differents projets.
 ```
   100%
 ```
-⏳ - C02 :
-```
-  Waiting for results...
-```
