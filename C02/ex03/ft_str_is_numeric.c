@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 16:43:45 by event             #+#    #+#             */
-/*   Updated: 2023/07/10 12:10:11 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/10 13:13:09 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/10 13:19:11 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_str_is_numeric(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
-}
+	int	i;
 
-/*int	main()
-{
-	ft_div_mod(5, 2, );
-}*/
+	i = 0;
+	while (str[i])
+	{
+		if (!(str[i] >= 48 && str[i] <= 57))
+			return (0);
+		i++;
+	}
+	return (1);
+}

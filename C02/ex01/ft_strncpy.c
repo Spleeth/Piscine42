@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 16:43:45 by event             #+#    #+#             */
-/*   Updated: 2023/07/10 12:10:11 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/10 12:05:39 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/10 12:19:10 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*div = a / b;
-	*mod = a % b;
-}
+	unsigned int	i;
 
-/*int	main()
-{
-	ft_div_mod(5, 2, );
-}*/
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}

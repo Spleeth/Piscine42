@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 16:43:45 by event             #+#    #+#             */
-/*   Updated: 2023/07/10 12:10:11 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/10 13:27:29 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/10 13:29:09 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strlowcase(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
-}
+	int	i;
 
-/*int	main()
-{
-	ft_div_mod(5, 2, );
-}*/
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] += 32;
+		i++;
+	}
+	return (str);
+}
