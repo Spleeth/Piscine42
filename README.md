@@ -13,7 +13,7 @@ Resultats des differents projets.
 ```
 ⏳ - C00 :
 ```
-  Waiting for results...
+  50%
 ```
 ⏳ - C01 :
 ```
