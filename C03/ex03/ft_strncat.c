@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 17:28:50 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/12 10:57:02 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/12 11:08:51 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/12 11:22:51 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	unsigned int	i;
 
-	i = 0;
-	while ((s1[i] && s2[i]) && (s1[i] == s2[i]) && i < (n - 1))
-		i++;
-	if (n < 1)
-		return (0);
-	return (s1[i] - s2[i]);
+char	*ft_strstr(char *str, char *to_find)
+{
+	pass
 }
