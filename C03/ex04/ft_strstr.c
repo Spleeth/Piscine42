@@ -23,27 +23,27 @@ int	ft_strlen(char *str)
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
-	int	j;
+	int i;
+	int tmp;
 
-	if (ft_strlen(to_find) < 1)
+	if (*to_find == '\0')
 		return (str);
-	i = 0;
-	while (str[i])
+	while (*str != '\0')
 	{
-		j = 0;
-		while (to_find[j])
+		if (*str == *to_find)
 		{
-			if (str[i + j] == to_find[j])
+			i = 0;
+			tmp = 0;
+			while (to_find[i] != '\0')
 			{
-				if (to_find[j + 1] != '\0')
-					return (&str[i]);
+				if (str[i] != to_find[i])
+					tmp = 1;
+				i++;
 			}
-			else
-				break ;
-			j++;
+			if (tmp == 0)
+				return (str);
 		}
-		i++;
+		str++;
 	}
 	return (0);
 }
