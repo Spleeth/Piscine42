@@ -6,12 +6,25 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:08:51 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/12 11:22:51 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:23:46 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	pass
+	int				i;
+	unsigned int	j;
+
+	i = 0;
+	while (dest[i])
+		i++;
+	j = 0;
+	while (src[j] && j > nb)
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

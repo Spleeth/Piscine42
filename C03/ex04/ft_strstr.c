@@ -1,24 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 17:28:50 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/12 10:57:02 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/12 11:57:11 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/12 12:13:51 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((s1[i] && s2[i]) && (s1[i] == s2[i]) && i < (n - 1))
+	while (str[i])
 		i++;
-	if (n < 1)
-		return (0);
-	return (s1[i] - s2[i]);
+	return (i);
+}
+
+char	*ft_strstr(char *str, char *to_find)
+{
+	int	i;
+	int	j;
+
+	if (ft_strlen(to_find) < 1)
+		return (str);
+	i = 0;
+	while (str[i])
+	{
+		j = 0;
+		while (to_find[j])
+		{
+			if (str[i + j] == to_find[j])
+			{
+				if (to_find[j + 1] != '\0')
+					return (&str[i]);
+			}
+			else
+				break ;
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }
