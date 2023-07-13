@@ -13,16 +13,19 @@ int	ft_strlen(char *str)
 int	main(int argc, char **argv)
 {
 	int	i;
-
-	if(argc > 0)
+	int	j;
+	
+	if (argc > 1)
 	{
-		i = 1;
+		i = 0;
 		while(argv[i])
-		{
-			write(1, argv[i], ft_strlen(argv[i]));
-			write(1, "\n", 1);
 			i++;
+		while(i > 1)
+		{
+			write(1, argv[i - 1], ft_strlen(argv[i - 1]));
+			write(1, "\n", 1);
+			i--;
 		}
 	}
-	return(0);
+:	return(0);
 }
