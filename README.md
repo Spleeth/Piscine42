@@ -3,24 +3,51 @@
 
 Resultats des differents projets.
 
-✅ - Shell00 :
+## ✅ - Shell00 :
 ```
   60%
 ```
-❌ - Shell01 :
+## ❌ - Shell01 :
 ```
   Skipped
 ```
-⏳ - C00 :
+## ✅ - C00 :
 ```
   50%
 ```
-⏳ - C01 :
+## ✅ - C01 :
 ```
-  Waiting for results...
+  50%
 ```
-
-✅ - Rush00 :
+## ❌ - Exam 00 :
+```
+  10%
+```
+## ✅ - Rush00 :
 ```
   100%
+```
+## ✅ - C02 :
+```
+  55%
+```
+## ❌ - C03 :
+```
+  30%
+```
+## ⏳ - C04 :
+```
+  Waiting for results
+```
+## ✅ - Exam 01 :
+```
+  40%
+```
+## ❌ - C05 :
+```
+  Skipped
+```
+## ⏳ - C06 :
+```
+  Waiting for results...
 ```
