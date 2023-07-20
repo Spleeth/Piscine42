@@ -6,34 +6,35 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 18:56:57 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/12 19:29:59 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/17 16:53:35 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int	resultat;
-	int	signe;
 	int	i;
+	int	mult;
+	int	nb;
 
-	resultat = 0;
-	signe = 1;
+	mult = 1;
+	nb = 0;
 	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
+	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
+		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 	{
-		i = i + 1;
+		i++;
 	}
-	if (str[i] == '+' || str[i] == '-')
+	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			signe = -1;
-		i = i + 1;
+			mult *= -1;
+		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		resultat = resultat * 10 + (str[i] - '0');
-		i = i + 1;
+		nb = (nb * 10) + (str[i] - '0');
+		i++;
 	}
-	return (resultat * signe);
+	nb *= mult;
+	return (nb);
 }
