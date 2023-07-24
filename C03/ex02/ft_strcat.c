@@ -6,15 +6,15 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 10:25:33 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/12 16:55:58 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/24 10:28:03 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
-	int i1;
-	int i2;
+	int	i1;
+	int	i2;
 
 	i1 = 0;
 	i2 = 0;
@@ -29,4 +29,3 @@ char	*ft_strcat(char *dest, char *src)
 	dest[i1] = '\0';
 	return (dest);
 }
-
