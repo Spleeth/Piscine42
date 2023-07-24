@@ -31,23 +31,39 @@ Resultats des differents projets.
 ```
   55%
 ```
-## ❌ - C03 :
+## ✅ - C03 :
 ```
-  30%
+  75%
 ```
-## ⏳ - C04 :
+## ✅ - C04 :
 ```
-  Waiting for results
+  70%
 ```
 ## ✅ - Exam 01 :
 ```
   40%
 ```
-## ❌ - C05 :
+
+## ❌ - Exam 02 :
+```
+  20%
+```
+
+## ❌ - BSQ :
 ```
   Skipped
 ```
+
+## ✅ - C05 :
+```
+  50%
+```
 ## ⏳ - C06 :
+```
+  Waiting for results...
+```
+
+## ⏳ - Rush 02 :
 ```
   Waiting for results...
 ```
