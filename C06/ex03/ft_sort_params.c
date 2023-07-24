@@ -5,75 +5,68 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 16:21:12 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/17 16:26:33 by tbesnard         ###   ########.fr       */
+/*   Created: 2023/07/24 12:43:30 by tbesnard          #+#    #+#             */
+/*   Updated: 2023/07/24 12:43:37 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	ft_putchar(char c)
 {
-	int				i;
-	char			diff;
-	unsigned char	*s1u;
-	unsigned char	*s2u;
-
-	s1u = (unsigned char *) s1;
-	s2u = (unsigned char *) s2;
-	i = 0;
-	diff = 0;
-	while (s1u[i] && s2u[i])
-	{
-		diff = s1u[i] - s2u[i];
-		i++;
-		if (diff != 0)
-			return (diff);
-	}
-	diff = s1u[i] - s2u[i];
-	return (diff);
+	write(1, &c, 1);
 }
 
-int	ft_strlen(char *str)
+int		ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (*s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }
 
 void	ft_strswap(char **a, char **b)
 {
-	char	*c;
+	char *c;
 
 	c = *a;
 	*a = *b;
 	*b = c;
 }
 
-int	main(int argc, char *argv[])
+void	ft_sort_str_tab(char **tab, int size)
 {
-	int	i;
-	int	j;
+	char	*pivot;
+	int		i;
+	int		j;
 
-	if (argc > 1)
-	{	
-		i = 0;
-		while (i++, argv[i])
-		{
-			j = 1;
-			while (j++, argv[j - 1])
-				if (argv[j - 1] && argv[j]
-					&& (ft_strcmp(argv[j - 1], argv[j]) > 0))
-					ft_strswap(&argv[j - 1], &argv[j]);
-		}
-		i = 0;
-		while (i++, argv[i - 1])
-		{
-			write(1, argv[i - 1], ft_strlen(argv[i - 1]));
-			write(1, "\n", 1);
-		}
+	if (size < 2)
+		return ;
+	pivot = tab[--size];
+	i = 0;
+	j = -1;
+	while (++j < size)
+		if (ft_strcmp(tab[j], pivot) < 0)
+			ft_strswap(&tab[i++], &tab[j]);
+	if (ft_strcmp(tab[i], tab[size]) > 0)
+		ft_strswap(&tab[i], &tab[size]);
+	ft_sort_str_tab(tab, i);
+	ft_sort_str_tab(tab + i + 1, size - i);
+}
+
+int		main(int argc, char **argv)
+{
+	int i;
+
+	ft_sort_str_tab(argv + 1, argc - 1);
+	i = 0;
+	while (++i < argc)
+	{
+		while (*argv[i])
+			ft_putchar(*argv[i]++);
+		ft_putchar('\n');
 	}
 	return (0);
 }
