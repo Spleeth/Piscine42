@@ -6,7 +6,7 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 18:10:48 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/17 16:45:41 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/24 11:00:08 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -23,6 +23,11 @@ void	ft_putnbr(int nb)
 
 	if (nb == -2147483648)
 	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
 		ft_putchar('-');
 		nb = -nb;
 	}
@@ -33,9 +38,7 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb_divided);
 	}
 	if (nb > 9)
-	{
 		ft_putchar(mod + '0');
-	}
 	else
 		ft_putchar(nb + '0');
 }
