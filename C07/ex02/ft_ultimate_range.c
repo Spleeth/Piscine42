@@ -6,7 +6,7 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 15:43:16 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/20 15:52:57 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:37:23 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -18,7 +18,7 @@ int	*ft_range(int min, int max)
 	int	i;
 
 	if (min >= max)
-		return (NULL); 
+		return (NULL);
 	pnt_len = max - min;
 	if (pnt_len < 1)
 		pnt = NULL;
@@ -52,7 +52,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 		*range = ft_range(min, max);
 		if (!range)
 		{
-			return(-1);
+			return (-1);
 		}
 	}
 	return (pnt_len);

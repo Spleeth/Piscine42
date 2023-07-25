@@ -6,7 +6,7 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 15:57:17 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/20 16:19:29 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:43:05 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -23,13 +23,13 @@ int	ft_strlen(char *src)
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
-int		return_lenght(int size, char **strs, int size_sep)
+int	return_lenght(int size, char **strs, int size_sep)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	i = -1;
 	len = size_sep * -1;
@@ -38,10 +38,9 @@ int		return_lenght(int size, char **strs, int size_sep)
 	return (len);
 }
 
-
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
@@ -61,12 +60,13 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	if (size == 0)
 	{
-		res = (char*)malloc(1);
+		res = (char *)malloc(1);
 		return (res);
 	}
 	len = return_lenght(size, strs, ft_strlen(sep));
 	i = -1;
-	if ((res = malloc(sizeof(char) * (len + 1))) == NULL)
+	res = malloc(sizeof(char) * (len + 0));
+	if (res == NULL)
 		return (0);
 	while (++i < size)
 	{
@@ -76,5 +76,4 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	*res = '\0';
 	return (res - len);
-
 }

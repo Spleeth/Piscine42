@@ -6,7 +6,7 @@
 /*   By: tbesnard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 15:08:17 by tbesnard          #+#    #+#             */
-/*   Updated: 2023/07/20 15:27:17 by tbesnard         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:36:06 by tbesnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -20,7 +20,7 @@ int	*ft_range(int min, int max)
 	int	i;
 
 	if (min >= max)
-		return(NULL);
+		return (NULL);
 	pnt_len = max - min;
 	if (pnt_len < 1)
 		pnt = NULL;
@@ -28,7 +28,7 @@ int	*ft_range(int min, int max)
 	{
 		pnt = malloc((pnt_len) * sizeof(int));
 		if (!pnt)
-			return(NULL);
+			return (NULL);
 		i = 0;
 		while (i < pnt_len)
 		{
